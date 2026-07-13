@@ -74,7 +74,7 @@ func tableAlicloudOssBucket(ctx context.Context) *plugin.Table {
 				Name:        "redundancy_type",
 				Type:        proto.ColumnType_STRING,
 				Hydrate:     getBucketInfo,
-				Transform:   transform.FromField("BucketInfo.RedundancyType"),
+				Transform:   transform.FromField("BucketInfo.DataRedundancyType"),
 				Description: "The type of disaster recovery for a bucket. Valid values: LRS and ZRS",
 			},
 			{
